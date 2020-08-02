@@ -1,5 +1,5 @@
-def import(Enemies, Messages, Functions, Rooms, Player, Program, debug):
-    global Enemies, Messages, Functions, Rooms, Player, Program, debug
+def import(Enemies, Messages, Functions, Rooms, Player, Program, debug, debugLog):
+    global Enemies, Messages, Functions, Rooms, Player, Program, debug, debugLog
     return
 
 def theGame():
