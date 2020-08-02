@@ -9,8 +9,8 @@ class Enemies:
         attackDamage = (10,20)
         health = 55
 
-class Shell:
-    attack_msg = "%(heSheIt)s %(methodOfAttack)s %(entityName)s, dealing %(damageCount)i damage."
+class Messages:
+    attack = "%(heSheIt)s %(methodOfAttack)s %(entityName)s, dealing %(damageCount)i damage."
     playerWin = "%(entityName)s dies and collapses on the ground in front of you. You have %(health)i health remaining."
     enemyWin = "You die and collapse on the ground. %(entityName)s %(verb)s triumphantly. They had %(health)i health remaining."
 
@@ -19,7 +19,7 @@ class Functions:
 
 class Rooms:
     class StartingRoom:
-        pass
+        commands = ["attack","quit"]
 
 class Player:
     class Info:
@@ -35,7 +35,10 @@ class Program:
         def debugLog(msg):
             if debug:
                 print("DEBUG: %s" % msg)
-        print("WIP")
+        print(self.Metadata.welcomeMsg)
+        while True:
+            pass
+        print("- GAME OVER -\nThanks for playing!")
 
 if __name__ == "__main__":
     Program.Start()
