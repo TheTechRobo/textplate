@@ -16,8 +16,12 @@ class Messages:
 
 class Functions:
     def random(range):
+        a, b = range
         import random
-        return random.randint(range)
+        return random.randint(a, b)
+    def askYesNo(question):
+        answer = input("%s [y/n]")
+        
 
 class Rooms:
     class StartingRoom:
