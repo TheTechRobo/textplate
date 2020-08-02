@@ -42,8 +42,10 @@ class Program:
                 print("DEBUG: %s" % msg)
         print(self.Metadata.welcomeMsg)
         from theGame import import as i
-        i(Enemies, Messages, Functions, Rooms, Player, Program, debug, debugLog)
+        i(Enemies, Messages, Functions, Rooms, Player, Program, debugLog)
         del i
+        import theGame
+        theGame.theGame(debug)
         print("- GAME OVER -\nThanks for playing!")
 
 if __name__ == "__main__":
