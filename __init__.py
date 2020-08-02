@@ -21,11 +21,10 @@ class Functions:
         return random.randint(a, b)
     def askYesNo(question):
         answer = input("%s [y/n]")
-        
 
 class Rooms:
     class StartingRoom:
-        commands = ["attack","quit"]
+        commands = ["attack", "quit"]
 
 class Player:
     class Info:
@@ -42,8 +41,9 @@ class Program:
             if debug:
                 print("DEBUG: %s" % msg)
         print(self.Metadata.welcomeMsg)
-        while True:
-            pass
+        from theGame import import as i
+        i(Enemies, Messages, Functions, Rooms, Player, Program, debug, debugLog)
+        del i
         print("- GAME OVER -\nThanks for playing!")
 
 if __name__ == "__main__":
