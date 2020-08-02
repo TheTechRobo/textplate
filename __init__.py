@@ -13,8 +13,13 @@ class Shell:
     attack_msg = "%(heSheIt)s %(methodOfAttack)s %(entityName)s, dealing %(damageCount)i damage."
     playerWin = "%(entityName)s dies and collapses on the ground in front of you. You have %(health)i health remaining."
     enemyWin = "You die and collapse on the ground. %(entityName)s %(verb)s triumphantly. They had %(health)i health remaining."
+
 class Functions:
     pass
+
+class Rooms:
+    class StartingRoom:
+        pass
 
 class Player:
     class Info:
@@ -27,7 +32,10 @@ class Program:
         version = "0.0 (Original Shell) build XXXXXXXX" #tip: for the build put the git commit hash or the svn revision number
         welcomeMsg = "Hello and welcome to Example version %s! We hope you have a great experience." % self.version
     def Start(debug=False):
-        pass
+        def debugLog(msg):
+            if debug:
+                print("DEBUG: %s" % msg)
+        print("WIP")
 
 if __name__ == "__main__":
     Program.Start()
