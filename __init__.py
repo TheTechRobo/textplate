@@ -15,7 +15,9 @@ class Messages:
     enemyWin = "You die and collapse on the ground. %(entityName)s %(verb)s triumphantly. They had %(health)i health remaining."
 
 class Functions:
-    pass
+    def random(range):
+        import random
+        return random.randint(range)
 
 class Rooms:
     class StartingRoom:
