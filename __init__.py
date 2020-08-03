@@ -45,7 +45,7 @@ class Program:
             if debug:
                 print("DEBUG: %s" % msg)
         print(Program.Metadata.welcomeMsg)
-        from theGame import import as i
+        from theGame import i
         i(Enemies, Messages, Functions, Rooms, Player, Program, debugLog)
         del i
         import theGame
