@@ -13,6 +13,9 @@ class Messages:
     attack = "%(heSheIt)s %(methodOfAttack)s %(entityName)s, dealing %(damageCount)i damage."
     playerWin = "%(entityName)s dies and collapses on the ground in front of you. You have %(health)i health remaining."
     enemyWin = "You die and collapse on the ground. %(entityName)s %(verb)s triumphantly. They had %(health)i health remaining."
+    gameOver = "- GAME OVER -\nThanks for playing!"
+    welcomeMsg = "Hello and welcome to Example version %s! We hope you have a great experience." % versionMsg
+    versionMsg = "0.0 (Original Shell) build XXXXXXXX" #tip: for the build put the git commit hash or the svn revision number
 
 class Functions:
     def random(range):
@@ -34,19 +37,20 @@ class Player:
 
 class Program:
     class Metadata:
-        version = "0.0 (Original Shell) build XXXXXXXX" #tip: for the build put the git commit hash or the svn revision number
-        welcomeMsg = "Hello and welcome to Example version %s! We hope you have a great experience." % self.version
-    def Start(debug=False):
+        version = 0.0
+        createdBy = "TheTechRobo"
+        url = "https://github.com/thetechrobo/textplate
+    def Start(self, debug=False):
         def debugLog(msg):
             if debug:
                 print("DEBUG: %s" % msg)
-        print(self.Metadata.welcomeMsg)
+        print(Program.Metadata.welcomeMsg)
         from theGame import import as i
         i(Enemies, Messages, Functions, Rooms, Player, Program, debugLog)
         del i
         import theGame
         theGame.theGame(debug)
-        print("- GAME OVER -\nThanks for playing!")
+        print(Messages.gameOver)
 
 if __name__ == "__main__":
     Program.Start()
