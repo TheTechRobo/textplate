@@ -39,7 +39,7 @@ class Program:
     class Metadata:
         version = 0.0
         createdBy = "TheTechRobo"
-        url = "https://github.com/thetechrobo/textplate
+        url = "https://github.com/thetechrobo/textplate"
     def Start(self, debug=False):
         def debugLog(msg):
             if debug:
