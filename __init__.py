@@ -14,8 +14,9 @@ class Messages:
     playerWin = "%(entityName)s dies and collapses on the ground in front of you. You have %(health)i health remaining."
     enemyWin = "You die and collapse on the ground. %(entityName)s %(verb)s triumphantly. They had %(health)i health remaining."
     gameOver = "- GAME OVER -\nThanks for playing!"
-    versionMsg = "0.0 (Original Shell) build XXXXXXXX" #tip: for the build put the git commit hash or the svn revision number
+    versionMsg = "0.0 (Original Shell) build XXXXXXXX" #tip: for the build put the git commit hash or the svn revision number, only if you want though
     welcomeMsg = "Hello and welcome to Example version %s! We hope you have a great experience." % versionMsg
+    cheater = "Detected cheating."
 
 class Functions:
     def random(range):
@@ -45,11 +46,8 @@ class Program:
             if debug:
                 print("DEBUG: %s" % msg)
         print(Messages.welcomeMsg)
-        from theGame import i
-        i(Enemies, Messages, Functions, Rooms, Player, Program, debugLog)
-        del i
-        import theGame
-        theGame.theGame(debug)
+        from theGame import theGame
+        theGame(Enemies, Messages, Functions, Rooms, Player, Program, debugLog, debug)
         print(Messages.gameOver)
 
 if __name__ == "__main__":
