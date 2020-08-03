@@ -1,4 +1,4 @@
-#This is completely untested!!! Made with github online no test.
+#This is completely untested!!! Made with github online no test. (Actually, scratch that.)
 
 #See credits in readme.md
 
@@ -14,8 +14,8 @@ class Messages:
     playerWin = "%(entityName)s dies and collapses on the ground in front of you. You have %(health)i health remaining."
     enemyWin = "You die and collapse on the ground. %(entityName)s %(verb)s triumphantly. They had %(health)i health remaining."
     gameOver = "- GAME OVER -\nThanks for playing!"
-    welcomeMsg = "Hello and welcome to Example version %s! We hope you have a great experience." % versionMsg
     versionMsg = "0.0 (Original Shell) build XXXXXXXX" #tip: for the build put the git commit hash or the svn revision number
+    welcomeMsg = "Hello and welcome to Example version %s! We hope you have a great experience." % versionMsg
 
 class Functions:
     def random(range):
