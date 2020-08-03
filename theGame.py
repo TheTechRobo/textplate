@@ -1,7 +1,8 @@
 def i(Enemies, Messages, Functions, Rooms, Player, Program, debugLog):
-    global Enemies, Messages, Functions, Rooms, Player, Program, debugLog
-    return
-
-def theGame():
+    pass
+    """
+    This function is justbecause im too lazy to go into the other file and fix stuff.
+    """
+def theGame(Enemies, Messages, Functions, Rooms, Player, Program, debugLog):
     #DEFINE VARIABLES
     currentRoom = 0
