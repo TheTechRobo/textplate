@@ -2,6 +2,8 @@
 
 #See credits in readme.md
 
+import random
+
 class Enemies:
     class Example:
         name = "Example"
@@ -20,11 +22,23 @@ class Messages:
 
 class Functions:
     def random(range):
+        """
+        Usage:
+        >>> random((firstNumber, secondNumber))
+        Returns the result.
+        """
         a, b = range
-        import random
         return random.randint(a, b)
-    def askYesNo(question):
-        answer = input("%s [y/n]")
+    def ask(question):
+        """
+        Usage:
+        >>> if ask("question"):
+        ...    print("The player said yes.")
+        ... else:
+        ...    print("The player said no.")
+        """
+        answer = input(question + " [y/n]")
+        return answer[0].lower() == "y"
 
 class Rooms:
     class StartingRoom:
