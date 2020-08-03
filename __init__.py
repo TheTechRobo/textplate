@@ -40,7 +40,7 @@ class Program:
         version = 0.0
         createdBy = "TheTechRobo"
         url = "https://github.com/thetechrobo/textplate"
-    def Start(self, debug=False):
+    def __init__(self, debug=False):
         def debugLog(msg):
             if debug:
                 print("DEBUG: %s" % msg)
@@ -53,4 +53,4 @@ class Program:
         print(Messages.gameOver)
 
 if __name__ == "__main__":
-    Program.Start()
+    Program()
