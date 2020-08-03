@@ -44,7 +44,7 @@ class Program:
         def debugLog(msg):
             if debug:
                 print("DEBUG: %s" % msg)
-        print(Program.Metadata.welcomeMsg)
+        print(Messages.welcomeMsg)
         from theGame import i
         i(Enemies, Messages, Functions, Rooms, Player, Program, debugLog)
         del i
